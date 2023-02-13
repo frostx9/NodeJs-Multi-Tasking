@@ -1,0 +1,1 @@
+Node is a basically single threaded. To Optimize full power of processor we use child-process
