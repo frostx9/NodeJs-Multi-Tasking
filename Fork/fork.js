@@ -40,9 +40,10 @@ app.get("/two", async (req, res) => {
 })
 
 app.get("/three", (req, res) => {
-  const child = fork("./longtask.js")
+  const child = fork("./longtask.js")  // Pathe the file 
 
-  child.send("start")
+  child.send("start")  // Start Child Process 
+
   child.on("message", (sum) => {
     res.send({ sum: sum })
   })

@@ -1,9 +1,12 @@
 const { spawn } = require('child_process')
 
-const child = spawn("find", ['/'])
+const child = spawn("find", ['/']) // For Linux / Ubuntu
+
+// const child = spawn("dir",['/'] {shell: true})   // For Windowns 
+// .on - to listen
 
 child.stdout.on('data', (data) => {
-  console.log(`stdout: ${data}`);
+  console.log(`stdout: ${data.toString()}`);
 })
 
 child.stderr.on("data", (data) => {

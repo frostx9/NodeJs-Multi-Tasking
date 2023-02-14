@@ -9,6 +9,9 @@ const { exec } = require('child_process')
 
 // There is a problem with exec that all standard output taken into buffer and then print out. For Hugh standard ouput it will show error
 
+// exec alwys shell open first, then run command
+// spanw run comand first the opne shell
+
 exec("ls -lh", (error, stdout, stderr) => {
   if (error) {
     console.log(`error : ${error.message}`)
@@ -22,3 +25,8 @@ exec("ls -lh", (error, stdout, stderr) => {
 
   console.log(`stdout : ${stdout}`);
 })
+
+
+// exec("ls -lh", {1024 * 1024 * 4}, (error, stdout, stderr)   = > Mnaully Increase Buffer Length to 4 mb. By default 1 mb
+
+// Command - copy, mkdir, start, type

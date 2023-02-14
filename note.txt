@@ -1,1 +1,19 @@
 Node is a basically single threaded. To Optimize full power of processor we use child-process
+
+Node js is a single threaded. So it means execuation process is one line at a time top to button. 
+This execuation handled by event looop
+
+Process - It is a instance of a program that run on a system
+
+Spawn Method retun data as a stream
+
+exec method retrun data as a buffer. So when exec method call it response store
+in buffer storage. Buffer storage has a limit
+it w8 for fill buffer first, when it will filled, it gave response
+
+
+Fork - In fork method it invokes a module that creates an ipc channel between
+        child and parrent process. IPC - Inter-Process Comunication. Two way flow Comunication
+
+        1. First url of a file of its first paramenter
+        2. Array of String
